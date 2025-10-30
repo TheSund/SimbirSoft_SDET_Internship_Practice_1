@@ -1,12 +1,13 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver.edge.options import Options
+from data.constants import BASE_URL
+
 
 @pytest.fixture()
 def driver():
-    options = Options()
+    options = webdriver.EdgeOptions()
     options.add_argument('--enable-javascript')
     _driver = webdriver.Edge(options=options)
-    _driver.get("https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager")
+    _driver.get(BASE_URL)
     yield _driver
     _driver.quit()
