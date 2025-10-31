@@ -1,7 +1,14 @@
 import allure
 from selenium.webdriver.common.by import By
+
 from pages.base_page import BasePage
-from data.locators import ADD_CUSTOMER_TAB, ADD_FIRST_NAME, ADD_LAST_NAME, ADD_POST_CODE, ADD_CUSTOMER_SUBMIT
+from data.locators import (
+    ADD_CUSTOMER_TAB,
+    ADD_FIRST_NAME,
+    ADD_LAST_NAME,
+    ADD_POST_CODE,
+    ADD_CUSTOMER_SUBMIT
+)
 
 
 class AddCustomerPage(BasePage):

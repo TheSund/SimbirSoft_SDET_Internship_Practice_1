@@ -1,5 +1,7 @@
 import allure
 from selenium.webdriver.common.by import By
+
+from pages.base_page import BasePage
 from data.locators import (
     CUSTOMERS_TAB,
     CUSTOMERS_TABLE_ROWS,
@@ -7,9 +9,8 @@ from data.locators import (
     COL_LAST_NAME,
     COL_POST_CODE,
     COL_ACCOUNT_NUMBER,
-    COL_DELETE_CUSTOMER,
+    COL_DELETE_CUSTOMER
 )
-from pages.base_page import BasePage
 
 
 class CustomersPage(BasePage):
