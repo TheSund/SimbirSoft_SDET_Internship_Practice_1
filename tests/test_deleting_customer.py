@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from pages.customers_page import CustomersPage
 from utils.data_utils import DataUtils
@@ -6,7 +7,8 @@ from utils.data_utils import DataUtils
 @allure.parent_suite('XYZ Bank Testing')
 @allure.suite('Customers List Testing')
 @allure.title('Deleting a customer')
-def test_3(driver):
+@pytest.mark.order(3)
+def test_deleting_customer(driver):
     page = CustomersPage(driver)
 
     page.open_customers_tab()

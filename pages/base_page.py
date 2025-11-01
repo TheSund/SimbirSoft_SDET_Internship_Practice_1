@@ -18,8 +18,15 @@ class BasePage:
         return self.wait.until(EC.presence_of_all_elements_located((by, value)),
                                message=f'Элементы {by, value} не найдены')
 
+    def wait_for_clickable(self, by, value) -> WebElement:
+        element = self.find_element(by, value)
+        return self.wait.until(EC.element_to_be_clickable(element),
+                               message=f'Элемент {element} не кликабелен')
+
     def click(self, by, value):
-        self.find_element(by, value).click()
+        element = self.wait_for_clickable(by,value)
+        element.click()
 
     def send_keys(self, by, value, text: str):
         self.find_element(by, value).send_keys(text)
+

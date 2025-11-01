@@ -1,4 +1,5 @@
 import allure
+import pytest
 from selenium.webdriver.common.alert import Alert
 from pages.add_customer_page import AddCustomerPage
 from utils.customer_generators import CustomerGenerator
@@ -6,7 +7,8 @@ from utils.customer_generators import CustomerGenerator
 @allure.parent_suite('XYZ Bank Testing')
 @allure.suite('Customers List Testing')
 @allure.title('Adding a customer')
-def test_1(driver):
+@pytest.mark.order(1)
+def test_adding_customer(driver):
     page = AddCustomerPage(driver)
 
     post_code = CustomerGenerator.generate_post_code()
