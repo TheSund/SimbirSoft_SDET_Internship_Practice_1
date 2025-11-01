@@ -23,7 +23,7 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -n 3
+        pytest -n auto
 
     # 5. Сохраняем результаты Allure как артефакт
     - name: Upload allure-results
