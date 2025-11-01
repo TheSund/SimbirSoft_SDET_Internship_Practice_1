@@ -27,11 +27,18 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -n auto
+        pytest -n 3
 
-    # 5. Сохраняем результаты Allure как артефакт
     - name: Upload allure-results
       uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: allure-results
+    - name: Generate Allure Report
+      run: |
+        allure generate allure-results --clean -o allure-report
+    - name: Upload Allure HTML
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-report
+        path: allure-report
