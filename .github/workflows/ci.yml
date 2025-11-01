@@ -1,6 +1,6 @@
 name: XYZ Bank Customers Lists UI Testing
 
-oon:
+on:
   workflow_dispatch:
 
 jobs:
