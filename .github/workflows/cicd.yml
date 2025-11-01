@@ -1,6 +1,10 @@
 name: XYZ Bank Customers Lists UI Testing
 
 on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
