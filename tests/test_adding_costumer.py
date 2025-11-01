@@ -4,6 +4,7 @@ from selenium.webdriver.common.alert import Alert
 from pages.add_customer_page import AddCustomerPage
 from utils.customer_generators import CustomerGenerator
 
+
 @allure.parent_suite('XYZ Bank Testing')
 @allure.suite('Customers List Testing')
 @allure.title('Adding a customer')

@@ -7,7 +7,7 @@ ADD_POST_CODE = 'input[ng-model="postCd"]'
 
 ADD_CUSTOMER_SUBMIT = 'button[type="submit"]'
 
-#Customers list tab locators
+# Customers list tab locators
 CUSTOMERS_TAB = 'button[ng-class="btnClass3"]'
 
 CUSTOMERS_TABLE_ROWS = "table tbody tr"

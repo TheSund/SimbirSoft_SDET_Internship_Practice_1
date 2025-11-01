@@ -4,6 +4,7 @@ import pytest
 from pages.customers_page import CustomersPage
 from utils.data_utils import DataUtils
 
+
 @allure.parent_suite('XYZ Bank Testing')
 @allure.suite('Customers List Testing')
 @allure.title('Deleting a customer')

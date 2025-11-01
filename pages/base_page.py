@@ -4,6 +4,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class BasePage:
     def __init__(self, driver: WebDriver, timeout=5):
         self.driver = driver
@@ -24,9 +25,8 @@ class BasePage:
                                message=f'Элемент {element} не кликабелен')
 
     def click(self, by, value):
-        element = self.wait_for_clickable(by,value)
+        element = self.wait_for_clickable(by, value)
         element.click()
 
     def send_keys(self, by, value, text: str):
         self.find_element(by, value).send_keys(text)
-

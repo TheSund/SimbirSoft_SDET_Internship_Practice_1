@@ -26,8 +26,8 @@ class AddCustomerPage(BasePage):
         self.click(*self.add_customer_tab_button)
 
     @allure.step('Добавление клиента с индексом {post_code}, именем {first_name} и фамилией {last_name}')
-    def add_customer(self, first_name:str, last_name: str, post_code: str) -> None:
+    def add_customer(self, first_name: str, last_name: str, post_code: str) -> None
         self.send_keys(*self.first_name, first_name)
-        self.send_keys(*self.last_name,last_name)
-        self.send_keys(*self.post_code,post_code)
+        self.send_keys(*self.last_name, last_name)
+        self.send_keys(*self.post_code, post_code)
         self.click(*self.submit_btn)

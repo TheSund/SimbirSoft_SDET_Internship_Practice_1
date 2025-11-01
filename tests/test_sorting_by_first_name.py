@@ -3,6 +3,7 @@ import pytest
 
 from pages.customers_page import CustomersPage
 
+
 @allure.parent_suite('XYZ Bank Testing')
 @allure.suite('Customers List Testing')
 @allure.title('Sorting customers list by First Name')
